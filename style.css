@@ -1,0 +1,246 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 1;
+  background: url('your-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.top-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(139, 92, 246, 0.9);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.top-button:hover {
+  background-color: #7c3aed;
+}
+
+.search-box {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+header img {
+  height: 60px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #eeeeee;
+  margin: 0;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+input, select {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: #8b5cf6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #7c3aed;
+}
+
+.results {
+  width: 100%;
+  max-width: 600px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  color: #4c1d95;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card img {
+  width: 40px;
+  height: 40px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  background: url('your-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.search-box {
+  background-color: rgba(0, 0, 0, 0.4); /* ดำจางๆ */
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  color: white;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #8a5cff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+video.bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    h2 {
+  color: white;
+  font-size: 8.0rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.readonly-box {
+      font-size: 24px;
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      max-width: 500px;
+    }
+    .go-back-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 10px 15px;
+  border: 2px solid #00bcd4;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.go-back-button:hover {
+  background-color: #00bcd4;
+  color: #000;
+}
+.member-label {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid #4CAF50;
+  border-radius: 8px;
+  font-weight: bold;
+  backdrop-filter: blur(4px);
+}
