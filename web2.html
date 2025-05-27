@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌏Halal Project</title>
+  <!-- ✅ Google Font -->
+  <link href="https://fonts.google.com/specimen/Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="search.js"></script>
+</head>
+<body>
+
+  <!-- ✅ โลโก้ -->
+  <header>
+    <img src="https://cdn.discordapp.com/attachments/1182689099824500767/1367841653733326909/halal-shape-vector-54841414.jpg?ex=6835088f&is=6833b70f&hm=3b97610570c43ef847219c55c1c070c537c293cdab23c372e65b7c0e6d32e921&" alt="Halal Logo" />
+    <h1>Halal Project🕋</h1>
+  </header>
+
+  <div class="search-container">
+    <div class="row">
+      <input type="text" id="wordInput" placeholder="Type a word 🔥" />
+      <select id="languageSelect">
+        <option value="th">Thai🐘</option>
+        <option value="ch">Chinese⛩️</option>
+        <option value="eng">English✈️</option>
+      </select>
+    </div>
+    <button onclick="search()">Search🔍</button>
+  </div>
+  <div class="results" id="results"></div>
+
+  <body>
+
+  <!-- วิดีโอพื้นหลัง -->
+  <video autoplay muted loop playsinline id="bgVideo">
+  <source src="C:\Users\KITTIPAT\Downloads\ทดลอง\video\loop.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<a href="member.html" class="top-button">Member🧑🏻</a> 
+
+
+  <script>
+    const allowedWords = ["apple", "company", "โรงงาน", "dog", "elephant"];
+
+    
+<!-- คำ -->
+    const translations = {       
+      company: {
+        th: "โรงงาน", 
+        ch: "公司",
+        eng: "Company",
+      },
+      โรงงาน: {
+      th: "โรงงาน",
+      ch: "公司",
+      eng: "Company"
+    },
+      公司: {
+      th: "โรงงาน",
+      ch: "公司",
+      eng: "Company"
+    },
+      dog: {
+        th: "สุนัข",
+        ja: "いぬ",
+        es: "perro",
+        fr: "chien"
+      },
+      elephant: {
+        th: "ช้าง",
+        ja: "ぞう",
+        es: "elefante",
+        fr: "éléphant"
+      }
+    };
+
+    const langMap = {
+      th: 'Thai',
+      ch: 'Chinese',
+      eng: 'English'
+    };
+  </script>
+</body>
+</html>
