@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>🌏Halal Project</title>
-  <!-- ✅ Google Font -->
-  <link href="https://fonts.google.com/specimen/Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="search.js"></script>
+  <!-- ✅ Google Font (แก้ลิงก์ให้ใช้ได้จริง) -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="search.js"></script>
 </head>
 <body>
 
   <!-- ✅ โลโก้ -->
   <header>
-    <img src="https://cdn.discordapp.com/attachments/1182689099824500767/1367841653733326909/halal-shape-vector-54841414.jpg?ex=6835088f&is=6833b70f&hm=3b97610570c43ef847219c55c1c070c537c293cdab23c372e65b7c0e6d32e921&" alt="Halal Logo" />
+    <img src="https://cdn.discordapp.com/attachments/1182689099824500767/1367841653733326909/halal-shape-vector-54841414.jpg?ex=68365a0f&is=6835088f&hm=90272c079c202d1cc394aab7a42115a357053440226f2d00b06347d29ef894df&" alt="Halal Logo" />
     <h1>Halal Project🕋</h1>
   </header>
 
@@ -28,24 +28,33 @@
     </div>
     <button onclick="search()">Search🔍</button>
   </div>
+
   <div class="results" id="results"></div>
 
-  <body>
-
-  <!-- วิดีโอพื้นหลัง -->
+  <!-- ❌ FIX: ปิด tag <body> ผิดตำแหน่ง และวิดีโอ local ใช้ไม่ได้บน GitHub Pages -->
+  <!-- ✅ วิดีโอพื้นหลัง (เปลี่ยนเป็นลิงก์ออนไลน์ หรือใช้ path relative ถูกต้อง) -->
   <video autoplay muted loop playsinline id="bgVideo">
-  <source src="C:\Users\KITTIPAT\Downloads\ทดลอง\video\loop.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+    <source src="video/loop.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
-<a href="member.html" class="top-button">Member🧑🏻</a> 
+  <!-- ✅ ปุ่มลิงก์ไปหน้าอื่น -->
+  <a href="member.html" class="top-button">Member🧑🏻</a> 
 
-
+  <!-- ✅ คำแปลหลายภาษา -->
   <script>
-    const allowedWords = ["apple", "company", "โรงงาน", "dog", "elephant"];
+    function search() {
+      const word = document.getElementById("wordInput").value.trim();
+      const lang = document.getElementById("languageSelect").value;
+      const resultBox = document.getElementById("results");
 
-    
-<!-- คำ -->
+      if (translations[word]) {
+        resultBox.innerHTML = `<p><strong>${langMap[lang]}:</strong> ${translations[word][lang]}</p>`;
+      } else {
+        resultBox.innerHTML = `<p style="color: red;">The word "${word}" is not found.</p>`;
+      }
+    }
+
     const translations = {       
       company: {
         th: "โรงงาน", 
@@ -53,26 +62,24 @@
         eng: "Company",
       },
       โรงงาน: {
-      th: "โรงงาน",
-      ch: "公司",
-      eng: "Company"
-    },
+        th: "โรงงาน",
+        ch: "公司",
+        eng: "Company"
+      },
       公司: {
-      th: "โรงงาน",
-      ch: "公司",
-      eng: "Company"
-    },
+        th: "โรงงาน",
+        ch: "公司",
+        eng: "Company"
+      },
       dog: {
         th: "สุนัข",
-        ja: "いぬ",
-        es: "perro",
-        fr: "chien"
+        ch: "狗",
+        eng: "Dog"
       },
       elephant: {
         th: "ช้าง",
-        ja: "ぞう",
-        es: "elefante",
-        fr: "éléphant"
+        ch: "大象",
+        eng: "Elephant"
       }
     };
 
@@ -82,5 +89,6 @@
       eng: 'English'
     };
   </script>
+
 </body>
 </html>
